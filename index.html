@@ -1,0 +1,106 @@
+<!-- Слав, пароль от админки 92888fn92, пора бы тебе уже запомнить. -->
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+body {
+font: small-caps bold 24px/1 sans-serif;
+line-height: 11px;
+background: linear-gradient(black, #380000);
+background-size: 100000%;
+color: white;
+padding: 10px;
+}
+.title {
+border: 4px double black;
+border-color: pink;
+background: darkred;
+box-shadow: 0px 5px 30px white;
+padding: 10px;
+}
+.list {
+border: 3px double black;
+border-color: red;
+background: white;
+color: black;
+}
+.about {
+font: 1.2em "Fira Sans", sans-serif;
+margin: 10px;
+line-height: 35px;
+}
+@media (max-width:360px) {
+.main-title {font-size: 15px;}
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center class="title">
+<h2 class="main-title">Вас приветствует интернет-магазин <b>Ne-Moshenniki!</b></h2>
+<p style="font-size: 13px; color: lightgrey;">Покупая что-то на этом сайте Вы соглашаетесь, что вас обманут на денежные средства.<br><span style="font-size: 12px; color: darkgrey;">Купленный товар возврату не подлежит.</span></p>
+</center>
+
+
+<div class="list" style="margin-top: 20px;">
+<h2 style="margin: 3%;"><img style="float: left;" src="https://brstar.ru/img/catalog/111/max/2888254/1.jpg" height=250 width=220><span style="color: darkblue;">Игровой компьютер</span>
+<div class="about" style="font-size: 25px;">
+<text>
+Мощный игровой компьютер на процессоре Pentium. Подходит как для учёбы/работы, так и для гейминга. Тянет все современные игры (2009 года) в 300 ФПС и выше.<br>
+<span style="color: grey;">В комплекте офисная клавиатура и огнетушитель, на случай если системник загорится.</span><br>
+</text>
+<br>
+<center>
+<div style="text-align: center;">
+<a class="button" onclick="buy(399);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">99 999</span> <span style="color: darkgreen;"><b>399 РУБЛЕЙ</b></span></a>
+</div>
+</center>
+</div>
+</div>
+
+<div class="list" style="margin-top: 20px;">
+<h2 style="margin: 3%;"><img style="float: left;" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTsxtyhV6OlIyqyOEQZNbi6SuKDNi6MkHS6o2-7aaEKH73ArpCA5mZwod_cuOBjDuOFcwPtozVvHc425X3_yW7Mo4WljFOSlKvYx5eeO1_XNe2XOsFKxuxQ&usqp=CAE" height=250 width=220><span style="color: darkblue;">Крутой смартфон</span>
+<div class="about" style="font-size: 25px;">
+<text>
+Изящный, современный и мощный смартфон. Вообще он не такой как на картинке, просто это первое, что попалось под руку.<br>
+<span style="color: grey;">В комплекте кусок провода и моток синей изоленты, на случай если зарядный порт опять сломается.</span><br>
+</text>
+<br>
+<center>
+<div style="text-align: center;">
+<a class="button" onclick="buy(299);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">29 499</span> <span style="color: darkgreen;"><b>299 РУБЛЕЙ</b></span></a>
+</div>
+</center>
+</div>
+</div>
+
+<div class="list" style="margin-top: 20px;">
+<h2 style="margin: 3%;"><img style="float: left;" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTiYbDHT7ZVZO7ZfoZId-LiZhkMcnxnxjOq4GY9zrqVM_nDI-ntI7khsjX0esVfALbCF8V_Cbjurr6xE9V_793X3QW6RxHuOsqV8lHet4RDw484M_qXzyHyuQ&usqp=CAE" height=250 width=220><span style="color: darkblue;">Смарт-часы</span>
+<div class="about" style="font-size: 25px;">
+<text>
+Отличный выбор для тех, кому не приходится выбирать какую руку не жалко. Не носить на солнце, есть риск выхода из строя аккумулятора.<br>
+<span style="color: grey;">В 50% случаев товар приходит в виде настольной игры "Собери часы сам"</span><br>
+</text>
+<br>
+<center>
+<div style="text-align: center;">
+<a class="button" onclick="buy(99);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">8 199</span> <span style="color: darkgreen;"><b>99 РУБЛЕЙ</b></span></a>
+</div>
+</center>
+</div>
+</div>
+
+<script>
+function buy(costs) {
+location="https://oplata.qiwi.com/create?publicKey=48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPyRdJVoh6Zxx7aizgE4LJp3FgzJwvcvQNNtdp1wJbnmxefeBiWvsaskJcRF45AxSDiemTs4QcnUxrb6uaz3mAkhtZ5K1F6Zi7B5zqJcCrK&amount=" + costs + "&successUrl=https://scam-site-on-the-internet-created-to-deceive-you-for-money.ru/ok&failUrl=&comment=Покупка товара на сайте Ne-Moshenniki&extras[widgetAlias]=german-shswqs7uhsr&extras[widgetReferrer]=scam-site-on-the-internet-created-to-deceive-you-for-money.ru&extras[themeCode]=German-ShSWQs7UhsR"
+}
+</script>
+<div style="text-align: center; font-size: 15px; margin-top: 10px;">
+<a href="https://kay-software.ru/dosx/">Тех. поддержка</a>
+</div>
+</body>
+</html> 
