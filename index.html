@@ -1,4 +1,11 @@
-<!-- Слав, пароль от админки 92888fn92, пора бы тебе уже запомнить. -->
+<!--
+Спасибо моей команде за помощь в создании этого интернет-магазина!
+Сайт написан: DosX
+Qiwi API изучено: DosX
+Идеи для товаров: DosX
+Тех. поддержка: DosX
+Программист и дизайнер: DosX
+-->
 
 <!DOCTYPE html>
 <html>
@@ -11,6 +18,7 @@
 <link rel="stylesheet" href="button.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <style>
+
 body {
 font: small-caps bold 24px/1 sans-serif;
 line-height: 11px;
@@ -49,6 +57,21 @@ line-height: 35px;
 <p style="font-size: 13px; color: lightgrey;">Покупая что-то на этом сайте Вы соглашаетесь, что вас обманут на денежные средства.<br><span style="font-size: 12px; color: darkgrey;">Купленный товар возврату не подлежит.</span></p>
 </center>
 
+<div class="list" style="margin-top: 20px;">
+<h2 style="margin: 3%;"><img style="float: left;" src="https://i.ibb.co/2Zy7Qqk/encrypted-tbn0-gstatic-com-shopping.jpg" height=220 width=240><span style="color: darkblue;">Плазменный телевизор</span>
+<div class="about" style="font-size: 25px;">
+<text>
+Давно мечтали о крутом домашнем кинотеатре с большим экраном? Что-ж, мечтать не вредно.<br>
+<span style="color: grey;">Экран телевизора, кабели и инструкция продаются отдельно.</span><br>
+</text>
+<br>
+<center>
+<div style="text-align: center;">
+<a class="button" onclick="buy(999, 'Плазменный телевизор');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">129 199</span> <span style="color: darkgreen;"><b>999 РУБЛЕЙ</b></span></a>
+</div>
+</center>
+</div>
+</div>
 
 <div class="list" style="margin-top: 20px;">
 <h2 style="margin: 3%;"><img style="float: left;" src="https://brstar.ru/img/catalog/111/max/2888254/1.jpg" height=250 width=220><span style="color: darkblue;">Игровой компьютер</span>
@@ -60,7 +83,7 @@ line-height: 35px;
 <br>
 <center>
 <div style="text-align: center;">
-<a class="button" onclick="buy(399);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">99 999</span> <span style="color: darkgreen;"><b>399 РУБЛЕЙ</b></span></a>
+<a class="button" onclick="buy(399, 'Игровой компьютер');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">99 999</span> <span style="color: darkgreen;"><b>399 РУБЛЕЙ</b></span></a>
 </div>
 </center>
 </div>
@@ -76,7 +99,7 @@ line-height: 35px;
 <br>
 <center>
 <div style="text-align: center;">
-<a class="button" onclick="buy(299);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">29 499</span> <span style="color: darkgreen;"><b>299 РУБЛЕЙ</b></span></a>
+<a class="button" onclick="buy(299, 'Крутой смартфон');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">29 499</span> <span style="color: darkgreen;"><b>299 РУБЛЕЙ</b></span></a>
 </div>
 </center>
 </div>
@@ -92,7 +115,7 @@ line-height: 35px;
 <br>
 <center>
 <div style="text-align: center;">
-<a class="button" onclick="buy(99);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">8 199</span> <span style="color: darkgreen;"><b>99 РУБЛЕЙ</b></span></a>
+<a class="button" onclick="buy(99, 'Смарт-часы');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">8 199</span> <span style="color: darkgreen;"><b>99 РУБЛЕЙ</b></span></a>
 </div>
 </center>
 </div>
@@ -108,7 +131,7 @@ line-height: 35px;
 <br>
 <center>
 <div style="text-align: center;">
-<a class="button" onclick="buy(49);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">5 199</span> <span style="color: darkgreen;"><b>49 РУБЛЕЙ</b></span></a>
+<a class="button" onclick="buy(49, 'Модные наушники');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">5 199</span> <span style="color: darkgreen;"><b>49 РУБЛЕЙ</b></span></a>
 </div>
 </center>
 </div>
@@ -124,17 +147,18 @@ line-height: 35px;
 <br>
 <center>
 <div style="text-align: center;">
-<a class="button" onclick="buy(29);" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">1 199</span> <span style="color: darkgreen;"><b>29 РУБЛЕЙ</b></span></a>
+<a class="button" onclick="buy(39, 'Беспроводная игровая мышь');" style="font-size: 26px;"><span style="color: red; text-decoration: line-through;">1 199</span> <span style="color: darkgreen;"><b>39 РУБЛЕЙ</b></span></a>
 </div>
 </center>
 </div>
 </div>
 
 <script>
-function buy(costs) {
-// alert("Увы, оплата временно недоступна. Но вы можете купить этот товар, обратившись в поддержку сайта :)\n\nСтоимость: " + costs);
-//https://oplata.qiwi.com/create?publicKey=48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP3A4qpVcn9vT3azK6mSaVBeuAMLCcfeTKnkmJyqC3Fvihn3ifZkbFtZWzEP3LGRdgCkKQvdswFSpbX5rJ4PEqWDGsupVyut4cmt87Uv5VB&amount=12&customFields%5BwidgetAlias%5D=angelyna-sh45_2fhucu&customFields%5BwidgetReferrer%5D=qiwi.com%2F&customFields%5BthemeCode%5D=Angelyna-Sh45_2fhUcu
-location="https://oplata.qiwi.com/create?publicKey=48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP3A4qpVcn9vT3azK6mSaVBeuAMLCcfeTKnkmJyqC3Fvihn3ifZkbFtZWzEP3LGRdgCkKQvdswFSpbX5rJ4PEqWDGsupVyut4cmt87Uv5VB&amount=" + costs + "&successUrl=https://kay-software.ru/@sm-ok&failUrl=&comment=Перевод на развитие Kay Software&extras[widgetAlias]=german-shswqs7uhsr&extras[widgetReferrer]=localhost&extras[themeCode]=Angelyna-Sh45_2fhUcu"
+const qiwi_api = ["48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP3A4qpVcn9vT3azK6mSaVBeuAMLCcfeTKnkmJyqC3Fvihn3ifZkbFtZWzEP3LGRdgCkKQvdswFSpbX5rJ4PEqWDGsupVyut4cmt87Uv5VB", "Angelyna-Sh45_2fhUcu"];
+function buy(costs, order) {
+var comm = encodeURI("Приобретение товара \"" + order + "\" на сайте N3-M0SH3NN1K1");
+var secc = "https://kay-software.ru/@sm-ok";
+return location = "https://oplata.qiwi.com/create?publicKey=" + qiwi_api[0] + "&amount=" + costs + "&successUrl=" + secc + "&failUrl=&comment=" + comm + "&extras[widgetAlias]=" + qiwi_api[1] + "&extras[widgetReferrer]=localhost&extras[themeCode]=" + qiwi_api[1];
 }
 </script>
 <div style="text-align: center; font-size: 15px; margin-top: 10px;">
